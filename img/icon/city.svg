@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{font-family:'ArialMT';}
+	.st2{font-size:173px;}
+</style>
+<path d="M512,58.7C512,26.3,485.7,0,453.3,0H58.7C26.3,0,0,26.3,0,58.7v394.7C0,485.7,26.3,512,58.7,512h394.7
+	c32.4,0,58.7-26.3,58.7-58.7V58.7H512z"/>
+<text transform="matrix(1 0 0 1 111 256)" class="st0 st1 st2">City</text>
+<text transform="matrix(1 0 0 1 111 368.3615)" class="st0 st1 st2">Car</text>
+</svg>

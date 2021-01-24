@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>CityCar | Прокат Авто</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet" />
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/style.css" id="theme-link" />
+	<!-- <link rel="stylesheet" href="css/dark.css" /> -->
+	<link rel="stylesheet" href="./css/swiper.css">
+	<link rel="icon" href="./img/logo.svg">
+	<script src="js/main.js" defer></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./css/swiper.css">
+
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body oncopy="return false;">
+	<div class="container">
+		<div id="hellopreloader">
+			<div id="hellopreloader_preload"></div>
+			<p></p>
+		</div>
+		<header class="header">
+			<a class="logo">
+				<img class="fixed-gift" id="theme-button" src="img/icon/city.svg" style="width: 50px; height: 50px;"
+					alt="Logo">
+			</a>
+			<label class="address">
+				<div class='console-container'>
+					<span id='text'></span>
+					<div class='console-underscore' id='console'></div>
+				</div>
+			</label>
+			<div class="buttons">
+				<span class="user-name"></span>
+				<!-- <a class="theme-button" id="theme-button"><img src="./img/dark.svg" alt="Освещение"></a> -->
+				<button class="button button-primary button-auth">
+					<span class="button-auth-svg"></span>
+					<span class="button-text">Войти</span>
+				</button>
+				<button class="button button-cart" id="cart-button">
+					<span class="button-cart-svg"></span>
+					<span class="button-text">Заказ</span>
+				</button>
+				<button class="button button-primary button-out">
+					<span class="button-text">Выйти</span>
+					<span class="button-out-svg"></span>
+				</button>
+			</div>
+		</header>
+	</div>
+	<!-- /.container  -->
+	<main class="main">
+		<div class="container">
+			<div class="container-promo swiper-container" style="cursor: move">
+				<div class="swiper-wrapper">
+					<section class="swiper-slide promo pizza">
+						<h1 class="promo-title">Вы можете взять в прокат<br />любое авто 24 часа в сутки</h1>
+						<p class="promo-text">
+							Помимо этого, вы можете также взять: детское кресло, GPS-навигатор, антирадар, USB-зарядку,
+							инвертор на 220 вольт и даже холодильник. Вам нужно только настроить опции что вам нужно,
+							остальное остается за нами !
+						</p>
+					</section>
+					<section class="swiper-slide promo kebab">
+						<h1 class="promo-title">Обращаясь к нам <br>вы экономите</h1>
+						<p class="promo-text">
+							Да, в городе есть места, где цены дешевле, но это гарантия,
+							насквозь прокуренного и старого авто. Мы же предлагаем только новые авто, наши цены выгоднее
+							на 15 или даже 30%! Все наши автомобили 2016 г.
+						</p>
+					</section>
+					<section class="swiper-slide promo vegetables">
+						<h1 class="promo-title">Вы можете арендовать<br> автомобиль с доставкой</h1>
+						<p class="promo-text">
+							Мы доставим автомобиль в любую точку Нижегородской области, причем эта услуга
+							предоставляется круглосуточно. А если не хотите садиться за руль сами, к вашим услугам
+							личный водитель. Подробности уточняйте у оперторов
+						</p>
+					</section>
+					<section class="swiper-slide promo sushi">
+						<h1 class="promo-title">Подарок при повторной аренде</h1>
+						<p class="promo-text">
+							<ul class="promo-text" style="padding-bottom: 25px;">
+								<li>скидку 5% на последующие заказы;</li>
+								<li>скидку 10% на залог при последующих заказах;</li>
+								<li>бесплатные сутки аренды любой машины в день рождения;</li>
+								<li>бонусную карту;</li>
+							</ul>
+						</p>
+					</section>
+				</div>
+			</div>
+			<section class="restaurants">
+				<div class="section-heading">
+					<h2 class="section-title">Автомобили для аренды</h2>
+					<label class="search">
+						<a class="button button-primary auto-revue" id="btn_modal_slider">
+							<span class="button-galery"></span>
+							<span class="button-text">Галерея</span>
+						</a>
+						<div id="my_modal_slider" class="modal-footer_slider">
+							<div class="modal_content_slider">
+								<span class="close_modal_window_slider">&times;</span>
+								<div class="slider">
+									<div class="item">
+										<img src="img/live-photos/polo-face.jpg" alt="1 слайд">
+										<div class="slideText"></div>
+									</div>
+
+									<div class="item">
+										<img src="img/live-photos/polo.jpg" alt="2 слайд">
+										<div class="slideText"></div>
+									</div>
+
+									<div class="item">
+										<img src="img/live-photos/polo-enter.JPG" alt="3 слайд">
+										<div class="slideText"></div>
+									</div>
+
+									<div class="item">
+										<img src="img/live-photos/solaris.jpg" alt="4 слайд">
+										<div class="slideText"></div>
+									</div>
+
+									<div class="item">
+										<img src="img/live-photos/solaris-face.JPG" alt="5 слайд">
+										<div class="slideText"></div>
+									</div>
+
+									<div class="item">
+										<img src="img/live-photos/solarises.jpg" alt="6 слайд">
+										<div class="slideText"></div>
+									</div>
+
+									<div class="item">
+										<img src="img/live-photos/solaris-enter.JPG" alt="7 слайд">
+										<div class="slideText"></div>
+									</div>
+
+									<div class="item">
+										<img src="img/live-photos/rio-face.jpg" alt="8 слайд">
+										<div class="slideText"></div>
+									</div>
+
+									<div class="item">
+										<img src="img/live-photos/granta-face.jpg" alt="9 слайд">
+										<div class="slideText"></div>
+									</div>
+
+									<div class="item">
+										<img src="img/live-photos/c4-face1.jpg" alt="10 слайд">
+										<div class="slideText"></div>
+									</div>
+
+									<div class="item">
+										<img src="img/live-photos/c4-face2.jpg" alt="11 слайд">
+										<div class="slideText"></div>
+									</div>
+
+									<a class="prev" onclick="minusSlide()">&#10094;</a>
+									<a class="next" onclick="plusSlide()">&#10095;</a>
+								</div>
+
+								<div class="slider-dots">
+									<span class="slider-dots_item" onclick="currentSlide(1)"></span>
+									<span class="slider-dots_item" onclick="currentSlide(2)"></span>
+									<span class="slider-dots_item" onclick="currentSlide(3)"></span>
+									<span class="slider-dots_item" onclick="currentSlide(4)"></span>
+									<span class="slider-dots_item" onclick="currentSlide(5)"></span>
+									<span class="slider-dots_item" onclick="currentSlide(6)"></span>
+									<span class="slider-dots_item" onclick="currentSlide(7)"></span>
+									<span class="slider-dots_item" onclick="currentSlide(8)"></span>
+									<span class="slider-dots_item" onclick="currentSlide(9)"></span>
+									<span class="slider-dots_item" onclick="currentSlide(10)"></span>
+									<span class="slider-dots_item" onclick="currentSlide(11)"></span>
+								</div>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div class="marquee"><span>• HYUNDAI SOLARIS •ДЕТСКОЕ КРЕСЛО • LADA GRANTA • GPS • VOLKSWAGEN POLO •
+						АНТИРАДАР • KIA RIO • ИНВЕРТОР • CITROEN C4 SEDAN • ХОЛОДИЛЬНИК • VIP LADA VESTA • * NEW *
+						RENAULT
+						LOGAN </span></div>
+				<div class="cards cards-restaurants">
+
+			</section>
+			<section class="menu hide white-area" style="transition: 1s;">
+				<div class="section-heading">
+					<h2 class="section-title restaurant-title"></h2>
+					<div class="card-info">
+						<div class="rating">
+
+						</div>
+						<div class="price"></div>
+						<div class="category"></div>
+					</div>
+					<!-- /.card-info -->
+				</div>
+				<div class="cards cards-menu">
+				</div>
+				<!-- /.cards -->
+			</section>
+
+		</div>
+		<!-- /.container -->
+		<h1 class="map-text" style="transition: 1s;">г. Нижний Новгород, ул. Ларина, д. 13, к. 1</h1>
+		<section class="my-yandex-map" style="transition: 1s;">
+			<iframe id="map_863491197"
+				sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
+				width="100%" height="400px" frameborder="0" style="pointer-events: none;"></iframe>
+			<script type="text/javascript">
+				(function (e, t) {
+					var r = document.getElementById(e);
+					r.contentWindow.document.open(), r.contentWindow.document.write(atob(t)), r.contentWindow.document.close()
+				})("map_863491197",
+					"PGJvZHk+PHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgfQogICAgICAgIGh0bWwsIGJvZHksICNtYXAgewogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgIH0KICAgICAgICAuYnVsbGV0LW1hcmtlciB7CiAgICAgICAgICAgIHdpZHRoOiAyMHB4OwogICAgICAgICAgICBoZWlnaHQ6IDIwcHg7CiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKTsKICAgICAgICAgICAgYm9yZGVyOiA0cHggc29saWQgIzAyODFmMjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAgICAgIH0KICAgICAgICAucGVybWFuZW50LXRvb2x0aXAgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgICAgICBib3gtc2hhZG93OiBub25lOwogICAgICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgICAgIHBhZGRpbmc6IDZweCAxMnB4OwogICAgICAgICAgICBjb2xvcjogIzI2MjYyNjsKICAgICAgICB9CiAgICAgICAgLnBlcm1hbmVudC10b29sdGlwOmJlZm9yZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7CiAgICAgICAgfQogICAgICAgIC5kZy1wb3B1cF9oaWRkZW5fdHJ1ZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrOwogICAgICAgIH0KICAgICAgICAubGVhZmxldC1jb250YWluZXIgLmxlYWZsZXQtcG9wdXAgLmxlYWZsZXQtcG9wdXAtY2xvc2UtYnV0dG9uIHsKICAgICAgICAgICAgdG9wOiAwOwogICAgICAgICAgICByaWdodDogMDsKICAgICAgICAgICAgd2lkdGg6IDIwcHg7CiAgICAgICAgICAgIGhlaWdodDogMjBweDsKICAgICAgICAgICAgZm9udC1zaXplOiAyMHB4OwogICAgICAgICAgICBsaW5lLWhlaWdodDogMTsKICAgICAgICB9CiAgICA8L3N0eWxlPjxkaXYgaWQ9Im1hcCI+PC9kaXY+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9tYXBzLmFwaS4yZ2lzLnJ1LzIuMC9sb2FkZXIuanM/cGtnPWZ1bGwmYW1wO3NraW49bGlnaHQiPjwvc2NyaXB0PjxzY3JpcHQ+KGZ1bmN0aW9uKGUsdCl7dmFyIHI9SlNPTi5wYXJzZShlKSxuPUpTT04ucGFyc2UodCk7ZnVuY3Rpb24gYShlKXtyZXR1cm4gZGVjb2RlVVJJQ29tcG9uZW50KGF0b2IoZSkuc3BsaXQoIiIpLm1hcChmdW5jdGlvbihlKXtyZXR1cm4iJSIrKCIwMCIrZS5jaGFyQ29kZUF0KDApLnRvU3RyaW5nKDE2KSkuc2xpY2UoLTIpfSkuam9pbigiIikpfURHLnRoZW4oZnVuY3Rpb24oKXt2YXIgZT1ERy5tYXAoIm1hcCIse2NlbnRlcjpbbi5sYXQsbi5sb25dLHpvb206bi56b29tfSk7REcuZ2VvSlNPTihyLHtzdHlsZTpmdW5jdGlvbihlKXt2YXIgdCxyLG4sYSxvO3JldHVybntmaWxsQ29sb3I6bnVsbD09PSh0PWUpfHx2b2lkIDA9PT10P3ZvaWQgMDp0LnByb3BlcnRpZXMuZmlsbENvbG9yLGZpbGxPcGFjaXR5Om51bGw9PT0ocj1lKXx8dm9pZCAwPT09cj92b2lkIDA6ci5wcm9wZXJ0aWVzLmZpbGxPcGFjaXR5LGNvbG9yOm51bGw9PT0obj1lKXx8dm9pZCAwPT09bj92b2lkIDA6bi5wcm9wZXJ0aWVzLnN0cm9rZUNvbG9yLHdlaWdodDpudWxsPT09KGE9ZSl8fHZvaWQgMD09PWE/dm9pZCAwOmEucHJvcGVydGllcy5zdHJva2VXaWR0aCxvcGFjaXR5Om51bGw9PT0obz1lKXx8dm9pZCAwPT09bz92b2lkIDA6by5wcm9wZXJ0aWVzLnN0cm9rZU9wYWNpdHl9fSxwb2ludFRvTGF5ZXI6ZnVuY3Rpb24oZSx0KXtyZXR1cm4icmFkaXVzImluIGUucHJvcGVydGllcz9ERy5jaXJjbGUodCxlLnByb3BlcnRpZXMucmFkaXVzKTpERy5tYXJrZXIodCx7aWNvbjpmdW5jdGlvbihlKXtyZXR1cm4gREcuZGl2SWNvbih7aHRtbDoiPGRpdiBjbGFzcz0nYnVsbGV0LW1hcmtlcicgc3R5bGU9J2JvcmRlci1jb2xvcjogIitlKyI7Jz48L2Rpdj4iLGNsYXNzTmFtZToib3ZlcnJpZGUtZGVmYXVsdCIsaWNvblNpemU6WzIwLDIwXSxpY29uQW5jaG9yOlsxMCwxMF19KX0oZS5wcm9wZXJ0aWVzLmNvbG9yKX0pfSxvbkVhY2hGZWF0dXJlOmZ1bmN0aW9uKGUsdCl7ZS5wcm9wZXJ0aWVzLmRlc2NyaXB0aW9uJiZ0LmJpbmRQb3B1cChhKGUucHJvcGVydGllcy5kZXNjcmlwdGlvbikse2Nsb3NlQnV0dG9uOiEwLGNsb3NlT25Fc2NhcGVLZXk6ITB9KSxlLnByb3BlcnRpZXMudGl0bGUmJnQuYmluZFRvb2x0aXAoYShlLnByb3BlcnRpZXMudGl0bGUpLHtwZXJtYW5lbnQ6ITAsb3BhY2l0eToxLGNsYXNzTmFtZToicGVybWFuZW50LXRvb2x0aXAifSl9fSkuYWRkVG8oZSl9KX0pKCdbeyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsiY29sb3IiOiIjMDAwMDAwIiwidGl0bGUiOiIiLCJkZXNjcmlwdGlvbiI6IiIsInpJbmRleCI6MTAwMDAwMDAwMH0sImdlb21ldHJ5Ijp7InR5cGUiOiJQb2ludCIsImNvb3JkaW5hdGVzIjpbNDMuOTkwODgyLDU2LjIzOTQ0M119LCJpZCI6Nzg4fV0nLCd7ImxhdCI6NTYuMjYyMjMxNzk3Mzc2NjE0LCJsb24iOjQzLjk2ODMxNTEyNDUxMTcyNiwiem9vbSI6MTJ9Jyk8L3NjcmlwdD48c2NyaXB0IGFzeW5jPSIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbS9ndGFnL2pzP2lkPVVBLTE1ODg2NjE2OC0xIj48L3NjcmlwdD48c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+KGZ1bmN0aW9uKGUpe2Z1bmN0aW9uIHQoKXtkYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpfXdpbmRvdy5kYXRhTGF5ZXI9d2luZG93LmRhdGFMYXllcnx8W10sdCgianMiLG5ldyBEYXRlKSx0KCJjb25maWciLGUpLHdpbmRvdy5ndGFnPXR9KSgnVUEtMTU4ODY2MTY4LTEnKTwvc2NyaXB0PjwvYm9keT4="
+				)
+			</script>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-block">
+				<img class="footer-image" src="img/icon/city.svg" style="width: 50px; height: 50px;" alt="Logo" />
+				<nav class="footer-nav">
+					<a href="tel:+79202534084" class="footer-link">8(920) 253-40-84</a>
+					<a href="mailto:citycarnn@mail.ru" class="footer-link">citycarnn@mail.ru</a>
+					<a href="tel:+78314134084" class="footer-link">8(831) 413-40-84</a>
+					<a class="footer-link">8:00 - 20:00
+						ежедневно </a>
+				</nav>
+				<div class="social-links">
+					<a href="https://www.viber.com/ru/" target="_blank" class="social-link"><img
+							src="img/social/viber.svg" style="width: 50px;" alt="instagram" /></a>
+					<a href="https://www.whatsapp.com/" target="_blank" class="social-link"><img
+							src="img/social/whatsapp.svg" style="width: 50px;" alt="facebook" /></a>
+					<a href="https://vk.com/" target="_blank" class="social-link"><img src="img/social/vk.svg"
+							style="width: 50px;" alt="vk" /></a>
+					<a href="https://telegram.org/" target="_blank" class="social-link"><img
+							src="img/social/telegram.svg" style="width: 50px;" alt="vk" /></a>
+				</div>
+				<!-- /.social-links -->
+			</div>
+			<div class="footer-actions">
+				<div class="footer-form">
+					<div class="login-box">
+						<h2 id="footer-info-text">Обратный звонок</h2>
+						<form>
+							<div class="user-box">
+								<input type="text" name="" required="" id="footer-name-input">
+								<label>Имя</label>
+							</div>
+							<div class="user-box">
+								<input type="tel" name="" required="" id="footer-tel-input">
+								<label>Телефон</label>
+							</div>
+							<div class="checkbox-footer-from">
+								<input type="checkbox" required="" class="check-footer-form" checked="false">
+								<label>Согласен на обработку данных</label>
+							</div>
+							<a class="submit-footer-btn">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								Отправить
+							</a>
+						</form>
+					</div>
+				</div>
+				<div class="footer-form-2">
+					<div class="text">
+						<h2>Условия аренды автомобилей</h2>
+						<p>Автомобили предоставляются в прокат в чистом виде. Перед выдачей автомобиля фиксируется
+							объем бензина в топливном баке. Арендатор должен вернуть автомобиль с тем же количеством
+							топлива; в том случае, если уровень топлива не соответствует первоначальному объему,
+							взымается плата в размере 45 руб. за литр. Данная услуга не является продажей топлива.
+						</p>
+						<p>При подписании договора аренды, Арендатор сообщает номер мобильного телефона. В течение
+							всего срока аренды обязательно должна быть постоянная мобильная связь с Арендатором.</p>
+						<p>Арендатор должен поддерживать в надлежащем состоянии арендованный автомобиль в течение
+							всего срока действия договора. В транспортных средствах не запрещается курить, однако
+							коллектив АО «НИТЭК» обращает Ваше внимание на то, что при повреждении элементов салона
+							с Арендатора взымается штраф, который будет направлен на восстановление интерьера
+							автомобиля. Отнеситесь с уважением к компании, которая предоставляет Вам данный
+							автомобиль, некурящим клиентам, ну, и прежде всего, к самим себе, потому как, возможно,
+							в следующий раз, Вы снова окажетесь за рулем этого же транспортного средства.</p>
+
+						<h4>Документы и предметы передаваемые с арендованным автомобилем:</h4>
+						<ol>
+							<li>договор аренды автомобиля</li>
+							<li>акт приема-передачи автомобиля в аренду</li>
+							<li>доверенность на право управления автомобилем</li>
+							<li>свидетельство о регистрации автомобиля</li>
+							<li>страховой полис гражданской ответственности (ОСАГО)</li>
+							<li>ключ автомобиля с брелоком сигнализации</li>
+						</ol>
+
+						<h2>Условия оплаты</h2>
+						<p>При оплате аренды возможны 2 варианта:</p>
+						<ol>
+							<li>наличными перед получением автомобиля;</li>
+							<li>безналичная форма расчета по договору с юридическим лицом.</li>
+						</ol>
+						<p>В случае, если аренда автомобиля продолжается более месяца, условия оплаты оговариваются
+							индивидуально.</p>
+						<p>При получении автомобиля Арендатор вносит залог. Оплата залога производится наличными
+							либо картой. Для организаций возможно внесение денежных средств в качестве залога
+							безналичным расчетом. В том случае, если арендуемый автомобиль не выезжает за пределы
+							Нижегородской области, сумма залога составляет 5000 рублей; если автомобиль будет
+							эксплуатироваться не только по Нижегородской области, но и за ее пределами, сумма залога
+							оговаривается индивидуально (в зависимости от удаления от географической зоны
+							«Нижегородская область»). Если же транспортное средство эксплуатируется вне территории
+							РФ, то сумма залога составит 50000 рублей.</p>
+						<p>По окончанию срока аренды вся сумма залога возвращается Арендатору, при этом автомобиль
+							принимается в чистом виде и с полным баком. В том случае, если автомобиль передается
+							арендодателю грязным, и с несоответствующим количеством топлива в бензобаке, необходимые
+							для мойки и заправки автомобиля денежные средства будут удержаны из суммы залога. При
+							приемке автомобиля, Арендодатель проверяет наличие штрафов, полученных арендатором в
+							ходе эксплуатации автомобиля. При их выявлении (информация о них доступна на официальном
+							сайте Госавтоинспекции МВД России), сумма необходимая для оплаты штрафов также
+							удерживается из залога. Обращаем ваше внимание на тот факт, что в одном только Нижнем
+							Новгороде более 150 камер фиксации правонарушений ПДД</p>
+
+						<h2>Необходимые <span>документы</span></h2>
+						<p>Для рассмотрения заявки на предоставление автомобиля в прокат
+							необходимо иметь следующие документы:</p>
+						<h4>Физическое лицо:</h4>
+						<ol>
+							<li>гражданский паспорт РФ;</li>
+							<li>водительское удостоверение категории «В», действительное на территории Российской
+								Федерации.</li>
+							<li>Возраст от 22-х лет и стаж вождения от 2-х лет.</li>
+						</ol>
+						<h4>Юридическое лицо:</h4>
+						<ol>
+							<li>доверенность на право подписания договора аренды автомобиля и актов выдачи/возврата
+								автомобиля;</li>
+							<li>гражданский паспорт РФ доверенного лица;</li>
+							<li>действительное водительское удостоверение доверенного лица;</li>
+							<li>копия свидетельства о регистрации юридического лица;</li>
+							<li>копия свидетельства о постановке на учет в налоговом органе;</li>
+							<li>реквизиты организации.</li>
+						</ol>
+						<h4>Иностранные граждане:</h4>
+						<ol>
+							<li>международный паспорт или его аналог;</li>
+							<li>миграционную карту;</li>
+							<li>действующее международное водительское удостоверение.</li>
+						</ol>
+						<p>* Компания оставляет за собой право отказать в предоставлении автомобиля без объяснения
+							причины.</p>
+					</div>
+				</div>
+			</div>
+			<div class="footer-form-mobile">
+				<div class="text">
+					<h2>Условия аренды автомобилей</h2>
+					<p>Автомобили предоставляются в прокат в чистом виде. Перед выдачей автомобиля фиксируется
+						объем бензина в топливном баке. Арендатор должен вернуть автомобиль с тем же количеством
+						топлива; в том случае, если уровень топлива не соответствует первоначальному объему,
+						взымается плата в размере 45 руб. за литр. Данная услуга не является продажей топлива.
+					</p>
+					<p>При подписании договора аренды, Арендатор сообщает номер мобильного телефона. В течение
+						всего срока аренды обязательно должна быть постоянная мобильная связь с Арендатором.</p>
+					<p>Арендатор должен поддерживать в надлежащем состоянии арендованный автомобиль в течение
+						всего срока действия договора. В транспортных средствах не запрещается курить, однако
+						коллектив АО «НИТЭК» обращает Ваше внимание на то, что при повреждении элементов салона
+						с Арендатора взымается штраф, который будет направлен на восстановление интерьера
+						автомобиля. Отнеситесь с уважением к компании, которая предоставляет Вам данный
+						автомобиль, некурящим клиентам, ну, и прежде всего, к самим себе, потому как, возможно,
+						в следующий раз, Вы снова окажетесь за рулем этого же транспортного средства.</p>
+
+					<h4>Документы и предметы передаваемые с арендованным автомобилем:</h4>
+					<ol>
+						<li>договор аренды автомобиля</li>
+						<li>акт приема-передачи автомобиля в аренду</li>
+						<li>доверенность на право управления автомобилем</li>
+						<li>свидетельство о регистрации автомобиля</li>
+						<li>страховой полис гражданской ответственности (ОСАГО)</li>
+						<li>ключ автомобиля с брелоком сигнализации</li>
+					</ol>
+
+					<h2>Условия оплаты</h2>
+					<p>При оплате аренды возможны 2 варианта:</p>
+					<ol>
+						<li>наличными перед получением автомобиля;</li>
+						<li>безналичная форма расчета по договору с юридическим лицом.</li>
+					</ol>
+					<p>В случае, если аренда автомобиля продолжается более месяца, условия оплаты оговариваются
+						индивидуально.</p>
+					<p>При получении автомобиля Арендатор вносит залог. Оплата залога производится наличными
+						либо картой. Для организаций возможно внесение денежных средств в качестве залога
+						безналичным расчетом. В том случае, если арендуемый автомобиль не выезжает за пределы
+						Нижегородской области, сумма залога составляет 5000 рублей; если автомобиль будет
+						эксплуатироваться не только по Нижегородской области, но и за ее пределами, сумма залога
+						оговаривается индивидуально (в зависимости от удаления от географической зоны
+						«Нижегородская область»). Если же транспортное средство эксплуатируется вне территории
+						РФ, то сумма залога составит 50000 рублей.</p>
+					<p>По окончанию срока аренды вся сумма залога возвращается Арендатору, при этом автомобиль
+						принимается в чистом виде и с полным баком. В том случае, если автомобиль передается
+						арендодателю грязным, и с несоответствующим количеством топлива в бензобаке, необходимые
+						для мойки и заправки автомобиля денежные средства будут удержаны из суммы залога. При
+						приемке автомобиля, Арендодатель проверяет наличие штрафов, полученных арендатором в
+						ходе эксплуатации автомобиля. При их выявлении (информация о них доступна на официальном
+						сайте Госавтоинспекции МВД России), сумма необходимая для оплаты штрафов также
+						удерживается из залога. Обращаем ваше внимание на тот факт, что в одном только Нижнем
+						Новгороде более 150 камер фиксации правонарушений ПДД</p>
+
+					<h2>Необходимые <span>документы</span></h2>
+					<p>Для рассмотрения заявки на предоставление автомобиля в прокат
+						необходимо иметь следующие документы:</p>
+					<h4>Физическое лицо:</h4>
+					<ol>
+						<li>гражданский паспорт РФ;</li>
+						<li>водительское удостоверение категории «В», действительное на территории Российской
+							Федерации.</li>
+						<li>Возраст от 22-х лет и стаж вождения от 2-х лет.</li>
+					</ol>
+					<h4>Юридическое лицо:</h4>
+					<ol>
+						<li>доверенность на право подписания договора аренды автомобиля и актов выдачи/возврата
+							автомобиля;</li>
+						<li>гражданский паспорт РФ доверенного лица;</li>
+						<li>действительное водительское удостоверение доверенного лица;</li>
+						<li>копия свидетельства о регистрации юридического лица;</li>
+						<li>копия свидетельства о постановке на учет в налоговом органе;</li>
+						<li>реквизиты организации.</li>
+					</ol>
+					<h4>Иностранные граждане:</h4>
+					<ol>
+						<li>международный паспорт или его аналог;</li>
+						<li>миграционную карту;</li>
+						<li>действующее международное водительское удостоверение.</li>
+					</ol>
+					<p>* Компания оставляет за собой право отказать в предоставлении автомобиля без объяснения
+						причины.</p>
+				</div>
+			</div>
+			<div class="dark-text">
+				<h6>Предложения на сайте не являются офертой. | <a class="policy" id="btn_modal_window">Политика
+						конфиденциальности</a></h6>
+			</div>
+			<div id="my_modal" class="modal-footer_policy">
+				<div class="modal_content_footer">
+					<span class="close_modal_window_footer">&times;</span>
+					<p>г. Нижний Новгород</p>
+					<p>Настоящая Политика конфиденциальности персональных данных (далее – Политика
+						конфиденциальности) действует в отношении всей информации, которую сайт ...,
+						расположенный на доменном имени ... (www. ... .ru), может получить о
+						Пользователе во время использования сайта, программ и продуктов сайта.</p>
+					<h3>1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</h3>
+					<p>1.1 В настоящей Политике конфиденциальности используются следующие термины:</p>
+					<p>1.1.1. «Администрация сайта (далее – Администрация сайта) – уполномоченные сотрудники на
+						управления сайтом, действующие от имени ..., которые организуют и (или)
+						осуществляют обработку персональных данных, а также определяют цели обработки персональных
+						данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с
+						персональными данными.</p>
+					<p>1.1.2. «Персональные данные» - любая информация, относящаяся к прямо или косвенно
+						определенному или определяемому физическому лицу (субъекту персональных данных).</p>
+					<p>1.1.3. «Обработка персональных данных» - любое действие (операция) или совокупность действий
+						(операций), совершаемых с использованием средств автоматизации или без использования таких
+						средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение,
+						уточнение (обновление, изменение), извлечение, использование, передачу (распространение,
+						предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных
+						данных.</p>
+					<p>1.1.4. «Конфиденциальность персональных данных» - обязательное для соблюдения Оператором или
+						иным получившим доступ к персональным данным лицом требование не допускать их
+						распространения без согласия субъекта персональных данных или наличия иного законного
+						основания.</p>
+					<p>1.1.5. «Пользователь сайта Интернет-магазина (далее - Пользователь) – лицо, имеющее доступ к
+						Сайту, посредством сети Интернет и использующее сайт</p>
+					<p>1.1.6. «Cookies» — небольшой фрагмент данных, отправленный веб-сервером и хранимый на
+						компьютере пользователя, который веб-клиент или веб-браузер каждый раз пересылает
+						веб-серверу в HTTP-запросе при попытке открыть страницу соответствующего сайта.</p>
+					<p>1.1.7. «IP-адрес» — уникальный сетевой адрес узла в компьютерной сети, построенной по
+						протоколу IP.</p>
+
+					<h3>2. ОБЩИЕ ПОЛОЖЕНИЯ</h3>
+					<p>2.1. Использование Пользователем сайта означает согласие с настоящей Политикой
+						конфиденциальности и условиями обработки персональных данных Пользователя.</p>
+					<p>2.2. В случае несогласия с условиями Политики конфиденциальности Пользователь должен
+						прекратить использование сайта ... </p>
+					<p>2.3.Настоящая Политика конфиденциальности применяется только к сайту ... Сайт не
+						контролирует и не несет ответственность за сайты третьих лиц, на которые Пользователь может
+						перейти по ссылкам, доступным на сайте ...</p>
+					<p>2.4. Администрация сайта не проверяет достоверность персональных данных, предоставляемых
+						Пользователем.</p>
+
+					<h3>3. ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ</h3>
+					<p>3.1. Настоящая Политика конфиденциальности устанавливает обязательства Администрации сайта,
+						интернет-магазина по неразглашению и обеспечению режима защиты конфиденциальности
+						персональных данных, которые Пользователь предоставляет по запросу Администрации сайта при
+						регистрации на сайте или при оформлении заказа для приобретения Товара или Услуги.</p>
+					<p>3.2. Персональные данные, разрешённые к обработке в рамках настоящей Политики
+						конфиденциальности, предоставляются Пользователем путём заполнения регистрационной формы на
+						Сайте ... и включают в себя следующую информацию:</p>
+					<p>3.2.1. фамилию, имя, отчество Пользователя;</p>
+					<p>3.2.2. контактный телефон Пользователя;</p>
+					<p>3.2.3. адрес электронной почты (e-mail);</p>
+					<p>3.2.4. адрес доставки Товара;</p>
+					<p>3.2.5. место жительство Пользователя.</p>
+					<p>3.3. Сайт защищает Данные, которые автоматически передаются в процессе просмотра рекламных
+						блоков и при посещении страниц, на которых установлен статистический скрипт системы:</p>
+					<p>IP адрес;</p>
+					<p>информация из cookies;</p>
+					<p>информация о браузере (или иной программе, которая осуществляет доступ к показу рекламы);</p>
+					<p>время доступа;</p>
+					<p>адрес страницы, на которой расположен рекламный блок;</p>
+					<p>реферер (адрес предыдущей страницы).</p>
+					<p>3.3.1. Отключение cookies может повлечь невозможность доступа к частям сайта ...,
+						требующим авторизации.</p>
+					<p>3.3.2. Интернет-магазин осуществляет сбор статистики об IP-адресах своих посетителей. Данная
+						информация используется с целью выявления и решения технических проблем, для контроля
+						законности проводимых финансовых платежей.</p>
+					<p>3.4. Любая иная персональная информация неоговоренная выше (история покупок, используемые
+						браузеры и операционные системы и т.д.) подлежит надежному хранению и нераспространению, за
+						исключением случаев, предусмотренных в п.п. 5.2. и 5.3. настоящей Политики
+						конфиденциальности.</p>
+
+					<h3>4. ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ</h3>
+					<p>4.1. Персональные данные Пользователя Администрация сайта интернет-магазина может
+						использовать в целях:</p>
+					<p>4.1.1. Идентификации Пользователя, зарегистрированного на сайте ..., для оформления
+						заказа и (или) заключения Договора купли-продажи товара или услуги</p>
+					<p>4.1.2. Предоставления Пользователю доступа к персонализированным ресурсам Сайта.</p>
+					<p>4.1.3. Установления с Пользователем обратной связи, включая направление уведомлений,
+						запросов, касающихся использования Сайта, оказания услуг, обработки запросов и заявок от
+						Пользователя.</p>
+					<p>4.1.4. Определения места нахождения Пользователя для обеспечения безопасности, предотвращения
+						мошенничества.</p>
+					<p>4.1.5. Подтверждения достоверности и полноты персональных данных, предоставленных
+						Пользователем.</p>
+					<p>4.1.6. Создания учетной записи для совершения покупок, если Пользователь дал согласие на
+						создание учетной записи.</p>
+					<p>4.1.7. Уведомления Пользователя Сайта о состоянии Заказа.</p>
+					<p>4.1.8. Обработки и получения платежей, подтверждения налога или налоговых льгот, оспаривания
+						платежа, определения права на получение кредитной линии Пользователем.</p>
+					<p>4.1.9. Предоставления Пользователю эффективной клиентской и технической поддержки при
+						возникновении проблем связанных с использованием Сайта.</p>
+					<p>4.1.10. Предоставления Пользователю с его согласия, обновлений продукции, специальных
+						предложений, информации о ценах, новостной рассылки и иных сведений от имени сайта
+						... или от имени партнеров Интернет-магазина.</p>
+					<p>4.1.11. Осуществления рекламной деятельности с согласия Пользователя.</p>
+					<p>4.1.12. Предоставления доступа Пользователю на сайты или сервисы партнеров с целью получения
+						продуктов, обновлений и услуг.</p>
+
+					<h3>5. СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ</h3>
+					<p>5.1. Обработка персональных данных Пользователя осуществляется без ограничения срока, любым
+						законным способом, в том числе в информационных системах персональных данных с
+						использованием средств автоматизации или без использования таких средств.</p>
+					<p>5.2. Пользователь соглашается с тем, что Администрация сайта вправе передавать персональные
+						данные третьим лицам, в частности, курьерским службам, организациями почтовой связи,
+						операторам электросвязи, исключительно в целях выполнения заказа Пользователя, оформленного
+						на Сайте ..., включая доставку Товара.</p>
+					<p>5.3. Персональные данные Пользователя могут быть переданы уполномоченным органам
+						государственной власти Российской Федерации только по основаниям и в порядке, установленным
+						законодательством Российской Федерации.</p>
+					<p>5.4. При утрате или разглашении персональных данных Администрация сайта информирует
+						Пользователя об утрате или разглашении персональных данных.</p>
+					<p>5.5. Администрация сайта принимает необходимые организационные и технические меры для защиты
+						персональной информации Пользователя от неправомерного или случайного доступа, уничтожения,
+						изменения, блокирования, копирования, распространения, а также от иных неправомерных
+						действий третьих лиц.</p>
+					<p>.6. Администрация сайта совместно с Пользователем принимает все необходимые меры по
+						предотвращению убытков или иных отрицательных последствий, вызванных утратой или
+						разглашением персональных данных Пользователя.</p>
+
+					<h3>6. ОБЯЗАТЕЛЬСТВА СТОРОН</h3>
+					<p>6.1. Пользователь обязан:</p>
+					<p>6.1.1. Предоставить информацию о персональных данных, необходимую для пользования Сайтом
+						...</p>
+					<p>6.1.2. Обновить, дополнить предоставленную информацию о персональных данных в случае
+						изменения данной информации.</p>
+					<p>6.2. Администрация сайта обязана:</p>
+					<p>6.2.1. Использовать полученную информацию исключительно для целей, указанных в п. 4 настоящей
+						Политики конфиденциальности.</p>
+					<p>6.2.2. Обеспечить хранение конфиденциальной информации в тайне, не разглашать без
+						предварительного письменного разрешения Пользователя, а также не осуществлять продажу,
+						обмен, опубликование, либо разглашение иными возможными способами переданных персональных
+						данных Пользователя, за исключением п.п. 5.2. и 5.3. настоящей Политики Конфиденциальности.
+					</p>
+					<p>6.2.3. Принимать меры предосторожности для защиты конфиденциальности персональных данных
+						Пользователя согласно порядку, обычно используемого для защиты такого рода информации в
+						существующем деловом обороте.</p>
+					<p>6.2.4. Осуществить блокирование персональных данных, относящихся к соответствующему
+						Пользователю, с момента обращения или запроса Пользователя или его законного представителя
+						либо уполномоченного органа по защите прав субъектов персональных данных на период проверки,
+						в случае выявления недостоверных персональных данных или неправомерных действий.</p>
+
+					<h3>7. ОТВЕТСТВЕННОСТЬ СТОРОН</h3>
+					<p>7.1. Администрация сайта, не исполнившая свои обязательства, несёт ответственность за убытки,
+						понесённые Пользователем в связи с неправомерным использованием персональных данных, в
+						соответствии с законодательством Российской Федерации, за исключением случаев,
+						предусмотренных п.п. 5.2., 5.3. и 7.2. настоящей Политики Конфиденциальности.</p>
+					<p>7.2. В случае утраты или разглашения Конфиденциальной информации Администрация сайта не несёт
+						ответственность, если данная конфиденциальная информация:</p>
+					<p>7.2.1. Стала публичным достоянием до её утраты или разглашения.</p>
+					<p>7.2.2. Была получена от третьей стороны до момента её получения Администрацией сайта.</p>
+					<p>7.2.3. Была разглашена с согласия Пользователя.</p>
+
+					<h3>8. РАЗРЕШЕНИЕ СПОРОВ</h3>
+					<p>8.1. До обращения в суд с иском по спорам, возникающим из отношений между Пользователем сайта
+						и Администрацией сайта, обязательным является предъявление претензии (письменного
+						предложения о добровольном урегулировании спора).</p>
+					<p>8.2 .Получатель претензии в течение 30 календарных дней со дня получения претензии, письменно
+						уведомляет заявителя претензии о результатах рассмотрения претензии.</p>
+					<p>8.3. При не достижении соглашения спор будет передан на рассмотрение в судебный орган в
+						соответствии с действующим законодательством Российской Федерации.</p>
+					<p>8.4. К настоящей Политике конфиденциальности и отношениям между Пользователем и
+						Администрацией сайта применяется действующее законодательство Российской Федерации.</p>
+
+					<h3>9. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ</h3>
+					<p>9.1. Администрация сайта вправе вносить изменения в настоящую Политику конфиденциальности без
+						согласия Пользователя.</p>
+					<p>9.2. Новая Политика конфиденциальности вступает в силу с момента ее размещения на Сайте
+						..., если иное не предусмотрено новой редакцией Политики конфиденциальности.</p>
+					<p>9.3. Все предложения или вопросы по настоящей Политике конфиденциальности следует сообщать в
+						разделе "контакты" сайта ...</p>
+					<p>9.4. Действующая Политика конфиденциальности размещена на странице по адресу
+						http://.../.html</p>
+					<p>Обновлено «00» января 0000г.</p>
+				</div>
+			</div>
+			<a id="modal_content_timer">f</a></h6>
+			<div id="my_modal_timer" class="modal-footer_timer">
+				<div class="modal_content_timer">
+					<span class="close_modal_window_timer">&times;</span>
+					<div class="timer">
+						<div class="timer-title">Скидки каждому 5-му оставившему заявку !
+						</div>
+						<div class="timer-action">
+							До конца акции осталось :
+						</div>
+						<div class="timer-numbers" id="timer">
+							<span id="timer-hours">19</span>
+							<span>:</span>
+							<span id="timer-minutes">45</span>
+							<span>:</span>
+							<span id="timer-seconds">12</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.footer-block -->
+		</div>
+	</footer>
+
+	<div class="modal modal-cart">
+		<div class="modal-dialog">
+			<div class="modal-header">
+				<h3 class="modal-title">Корзина</h3>
+				<button class="close">&times;</button>
+			</div>
+			<!-- /.modal-header -->
+			<div class="modal-body">
+				<div class="food-row">
+					<span class="food-name"></span>
+					<strong class="food-price"></strong>
+					<div class="food-counter">
+						<button class="counter-button"></button>
+						<span class="counter"></span>
+						<button class="counter-button"></button>
+					</div>
+				</div>
+			</div>
+			<!-- /.modal-body -->
+			<div class="modal-footer">
+				<span class="modal-pricetag">1250 ₽</span>
+				<div class="footer-buttons">
+					<button class="button button-primary set-info" type="submit">Оформить заказ</button>
+					<button class="button clear-cart">Отмена</button>
+				</div>
+			</div>
+			<!-- /.modal-footer -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+	<div class="modal-auth">
+		<div class="modal-dialog modal-dialog-auth">
+			<button class="close-auth">&times;</button>
+			<form id="logInForm">
+				<fieldset class="modal-body">
+					<legend class="modal-title">Авторизация</legend>
+					<label class="label-auth">
+						<span>Телефон :</span>
+						<input id="login" type="text" required="" minlength="11" maxlength="11">
+					</label>
+					<h6>* Это нужно для просмотра содержимого, связи и защиты от спама.</h6>
+					<h6>** На данном этапе мы не видим ваших данных !</h6>
+				</fieldset>
+				<!-- /.modal-body -->
+				<div class="modal-footer">
+					<div class="footer-buttons">
+						<button class="button button-primary button-login" type="submit">Войти</button>
+					</div>
+				</div>
+			</form>
+			<!-- /.modal-footer -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+
+	<div class="cookie_notice">
+		Мы используем куки - потому что печеньки это здорово =)
+		<div>
+			<a class="cookie_btn" id="cookie_close">Круто !</a>
+			<a class="cookie_btn" id="cookie_btn_close"></a>
+		</div>
+	</div>
+
+	<a class="back_to_top" title="Наверх">↑</a>
+	<script src="./js/timer.js"></script>
+	<script src="./js/slider.js"></script>
+</body>
+<script>
+	let width = document.documentElement.clientWidth;
+	if (width < 340) {
+		alert(
+			'Скорее всего у вас iPhone 5/5S/SE\nНезначительные элементы могут отображаться упрощенно или выходить за пределы стандартного блока\nПриносим извинения🙏'
+			);
+	}
+</script>
+
+</html>

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "HYUNDAI SOLARIS",
+    "time_of_delivery": 40,
+    "stars": 4.7,
+    "price": 1600,
+    "kitchen": "123 л.с",
+    "image": "img/solaris/solaris-like.jpg",
+    "products": "solaris.json"
+  },
+  {
+    "name": "LADA GRANTA",
+    "time_of_delivery": 60,
+    "stars": 4.3,
+    "price": 1200,
+    "kitchen": "106 л.с",
+    "image": "img/granta/lada-granta-1.jpg",
+    "products": "granta.json"
+  },
+  {
+    "name": "VOLKSWAGEN POLO",
+    "time_of_delivery": 40,
+    "stars": 4.7,
+    "price": 1600,
+    "kitchen": "105 л.с",
+    "image": "img/polo/polo-like.jpg",
+    "products": "polo.json"
+  },
+  {
+    "name": "KIA RIO",
+    "time_of_delivery": 60,
+    "stars": 4.4,
+    "price": 1600,
+    "kitchen": "123 л.с",
+    "image": "img/rio/kia-rio-1.jpg",
+    "products": "rio.json"
+  },
+  {
+    "name": "CITROEN C4 SEDAN",
+    "time_of_delivery": 60,
+    "stars": 4.5,
+    "price": 1950,
+    "kitchen": "120 л.с",
+    "image": "img/c4/citroen-c4-1.jpg",
+    "products": "c4.json"
+  },
+  {
+    "name": "RENO LOGAN",
+    "time_of_delivery": 45,
+    "stars": 4.4,
+    "price": 1350,
+    "kitchen": "82 л.с",
+    "image": "img/logan/logan-new.jpg",
+    "products": "logan.json"
+  },
+  {
+    "name": "УСЛУГИ К АВТО",
+    "time_of_delivery": 25,
+    "stars": 5,
+    "price": 700,
+    "kitchen": "Различные допы",
+    "image": "img/dop/add.png",
+    "products": "dop.json"
+  },
+  {
+    "name": "LADA VESTA",
+    "time_of_delivery": 35,
+    "stars": 4.7,
+    "price": 1650,
+    "kitchen": "VIP клиентам",
+    "image": "img/vesta/lada-vesta-special.jpg",
+    "products": "vesta.json"
+  }
+]
